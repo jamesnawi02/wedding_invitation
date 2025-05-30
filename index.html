@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - Lovely & James</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;600&family=Lato:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f0f4f0 0%, #d4e6d4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .invitation-container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .invitation-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #6b7c32, #8fbc8f, #6b7c32);
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 30px 20px;
+            background: linear-gradient(135deg, #f8faf8 0%, #f0f4f0 100%);
+        }
+        
+        .couple-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #6b7c32;
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .invitation-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .couple-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #6b7c32;
+            margin: 20px 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        .wedding-date {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #6b7c32;
+        }
+        
+        .section-content {
+            font-size: 1.1rem;
+            color: #34495e;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+        
+        .time-date {
+            background: linear-gradient(135deg, #f8faf8 0%, #f0f4f0 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #6b7c32;
+        }
+        
+        .venue-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .venue-card {
+            background: #f8faf8;
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 3px solid #6b7c32;
+        }
+        
+        .venue-card h4 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .dress-code {
+            background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #9acd32;
+        }
+        
+        .rsvp-section {
+            background: linear-gradient(135deg, #6b7c32 0%, #8fbc8f 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .rsvp-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .decorative-element {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            color: #6b7c32;
+        }
+        
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 2.2rem;
+            }
+            
+            .invitation-title {
+                font-size: 2rem;
+            }
+            
+            .venue-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-container">
+        <div class="header">
+            <img src="jl.jpg" alt="Lovely and James" class="couple-photo">
+            <h1 class="invitation-title">A love to last a lifetime</h1>
+            <h2 class="couple-names">Lovely & James</h2>
+            <p class="wedding-date">request the pleasure of your company</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h3 class="section-title">Wedding Celebration</h3>
+                <div class="time-date">
+                    <div style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 8px;">
+                        Saturday, June 15th, 2027
+                    </div>
+                    <div style="font-size: 1.1rem; color: #7f8c8d;">
+                        at 4:00 in the afternoon
+                    </div>
+                </div>
+            </div>
+            
+            <div class="decorative-element">❦ ❦ ❦</div>
+            
+            <div class="section">
+                <h3 class="section-title">Ceremony & Reception</h3>
+                <div class="venue-info">
+                    <div class="venue-card">
+                        <h4>⛪ Ceremony</h4>
+                        <p><strong>The Transfiguration Chapel</strong><br>
+                        In Tagaytay<br>
+                        <em>4:00 PM</em></p>
+                    </div>
+                    <div class="venue-card">
+                        <h4>🥂 Reception</h4>
+                        <p><strong>Trabiesa Tagaytay</strong><br>
+                        Brgy. Patutong Malaki North<br>
+                        <em>6:00 PM - 11:00 PM</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="decorative-element">❦ ❦ ❦</div>
+            
+            <div class="section">
+                <h3 class="section-title">Dress Code</h3>
+                <div class="dress-code">
+                    <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 8px;">
+                        🌿 Semi-Formal Attire 🌿
+                    </p>
+                    <p style="font-size: 0.95rem; color: #2d3748;">
+                        Ladies: Cocktail dresses or elegant separates<br>
+                        (Olive green, light green, beige)<br>
+                        Gentlemen: Suit and tie or dress shirt with slacks<br>
+                        <em>Please avoid white and ivory</em>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="decorative-element">❦ ❦ ❦</div>
+            
+            <div class="section">
+                <div style="text-align: center; font-style: italic; color: #7f8c8d; font-size: 1rem; line-height: 1.6;">
+                    "Two souls with but a single thought,<br>
+                    Two hearts that beat as one."<br>
+                    <small>- John Grend</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="rsvp-section">
+            <h3>RSVP</h3>
+            <p style="margin-bottom: 8px;">Please respond by</p>
+            <p style="font-size: 0.95rem;">
+                📧 jamescaannawi02@gmail.com<br>
+                📱 09634581003
+            </p>
+        </div>
+    </div>
+</body>
+</html>
